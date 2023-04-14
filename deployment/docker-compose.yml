@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+    tnx-mysql-db:
+        image: mysql:latest
+        container_name: tnx
+        ports:
+            - "33063:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=123456
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=123456
+
+            - DEV_APP_PORT=${DEV_APP_PORT}
+            - DEV_DB_HOST=${DEV_DB_HOST}
+            - DEV_DB_PORT=${DEV_APP_PORT}
+            - DEV_DB_NAME=${DEV_DB_NAME}
+            - DEV_DB_USERNAME=${DEV_DB_USERNAME}
+            - DEV_DB_PASSWORD=${DEV_DB_PASSWORD}
+        command: --init-file /data/application/init.sql
+        volumes:
+            - ../db/dbdata:/var/lib/mysql
+            - ../db/my.cnf/config.cnf:/etc/mysql/conf.d/my.cnf
+            - ../migrate/tnxstorage.sql:/data/application/init.sql
+        networks:
+            - default
+
+volumes:
+    db:
