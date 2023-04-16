@@ -1,0 +1,41 @@
+{
+    "name": "fifty-milions-dummy",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "start:dev": "node --watch server.js",
+        "migrate": "npx sequelize-cli db:migrate",
+        "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
+        "seed:reset": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:seed:all"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrarsenal10/fifty-milions-dummy.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mrarsenal10/fifty-milions-dummy/issues"
+    },
+    "homepage": "https://github.com/mrarsenal10/fifty-milions-dummy#readme",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "helmet": "^6.1.5",
+        "mongoose": "^7.0.3",
+        "morgan": "^1.10.0",
+        "mysql2": "^3.2.1",
+        "sequelize": "^6.31.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^4.6.2",
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^7.6.0",
+        "sequelize-cli": "^6.6.0"
+    }
+}
