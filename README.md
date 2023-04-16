@@ -35,13 +35,16 @@ Note: We are using MySQL as our storage database. In order to run MySQL, you wil
 ```bash
 make build_application
 
+At the folter root of project, executing these lines:
+
 # development
 $ npm install
 $ npm run migrate
 $ npm run seed
 
 # Because Point table contains 50 millions record, I have to use worker_thread to migrate and seed database.
-$ node /src/workers/index.js
+# It takes time to generate data for Point table
+$ node src/workers
 
 $ npm run start:dev
 
