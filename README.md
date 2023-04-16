@@ -37,9 +37,10 @@ make build_application
 
 # development
 $ npm install
-$ npm run start:dev
 $ npm run migrate
 $ npm run seed
+
+$ npm run start:dev
 
 # Because Point table contains 50 millions record, I have to use worker_thread to migrate and seed database.
 $ node /src/workers/index.js
