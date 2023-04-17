@@ -12,20 +12,6 @@ This is repo running with NodeJS
 - docker-compose: >= 1.29
 - npm => 8.19
 
-**Step 1:**
-After you clone the repo, please creating `.env` file in the root folder
-
-Copy and paste:
-```
-DEV_APP_PORT=3000
-DEV_DB_HOST=localhost
-DEV_DB_PORT=33063
-DEV_DB_NAME=tnx
-DEV_DB_USERNAME=root
-DEV_DB_PASSWORD=123456
-```
-
-**Step 2**
 <h3>Database</h3>
 
 Note: We are using MySQL as our storage database. In order to run MySQL, you will need to download Docker. Then, run the following command:
