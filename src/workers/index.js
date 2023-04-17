@@ -8,9 +8,6 @@ const numCPUs = os.cpus().length;
 
 console.log(`Num of threads::::${numCPUs}`);
 
-const NUM_RECORDS = 50_000_000;
-const SIZE_BATCH = 1000;
-
 const THREAD_COUNT = numCPUs > 4 ? numCPUs - 2 : 1;
 
 function createWorker({ ith, records_each_thread }) {
@@ -18,7 +15,7 @@ function createWorker({ ith, records_each_thread }) {
         const worker = new Worker("./src/workers/multi.workers.js");
         worker.postMessage({
             records_each_thread,
-            size_batch: SIZE_BATCH,
+            size_batch: process.env.SIZE_BATCH,
             ith,
         });
         worker.on("message", ({ exit }) => {
@@ -44,16 +41,16 @@ const main = async () => {
         workerPromises.push(
             createWorker({
                 ith: i,
-                records_each_thread: Math.floor(NUM_RECORDS / THREAD_COUNT),
+                records_each_thread: Math.floor(process.env.NUM_RECORDS / THREAD_COUNT),
             })
         );
     }
 
-    if (NUM_RECORDS % THREAD_COUNT !== 0) {
+    if (process.env.NUM_RECORDS % THREAD_COUNT !== 0) {
         workerPromises.push(
             createWorker({
                 ith: THREAD_COUNT,
-                records_each_thread: NUM_RECORDS % THREAD_COUNT,
+                records_each_thread: process.env.NUM_RECORDS % THREAD_COUNT,
             })
         );
     }
