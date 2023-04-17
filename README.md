@@ -43,3 +43,8 @@ $ npm run seed:reset
 ```
 Swagger: http://localhost:3000/docs
 ```
+
+##Screenshot
+```
+Please refer to TNX.pdf
+```
