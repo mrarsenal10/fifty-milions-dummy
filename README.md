@@ -14,7 +14,7 @@ This is repo running with NodeJS
 
 <h3>Database</h3>
 
-Note: We are using MySQL as our storage database. In order to run MySQL, you will need to download Docker. Then, run the following command:
+Note: We are using MySQL as our storage database. In order to run MySQL, you will need to download Docker.
 
 ## Running the app
 
