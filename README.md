@@ -35,7 +35,7 @@ Note: We are using MySQL as our storage database. In order to run MySQL, you wil
 At the folder root of project, executing these lines:
 
 # development
-
+```bash
 $ make build_application
 $ npm install
 $ npm run migrate
