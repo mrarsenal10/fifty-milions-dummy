@@ -17,12 +17,12 @@ After you clone the repo, please creating `.env` file in the root folder
 
 Copy and paste:
 ```
-DEV_APP_PORT=
-DEV_DB_HOST=
-DEV_DB_PORT=
-DEV_DB_NAME=
-DEV_DB_USERNAME=
-DEV_DB_PASSWORD=
+DEV_APP_PORT=3000
+DEV_DB_HOST=localhost
+DEV_DB_PORT=33063
+DEV_DB_NAME=tnx
+DEV_DB_USERNAME=root
+DEV_DB_PASSWORD=123456
 ```
 
 **Step 2**
