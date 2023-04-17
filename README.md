@@ -1,12 +1,12 @@
 # Description
 ## fifty-milions-dummy
 
-This is repo running with NodeJS
+This is repo running with NodeJS 
 
 ## Setup
 
 **Requirement**:
-
+- mac or linux
 - node >= 16.19
 - docker >= 3.8
 - docker-compose: >= 1.29
