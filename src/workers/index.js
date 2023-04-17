@@ -15,7 +15,7 @@ const THREAD_COUNT = numCPUs > 4 ? numCPUs - 2 : 1;
 
 function createWorker({ ith, records_each_thread }) {
     return new Promise((resolve, reject) => {
-        const worker = new Worker("./multi.workers.js");
+        const worker = new Worker("./src/workers/multi.workers.js");
         worker.postMessage({
             records_each_thread,
             size_batch: SIZE_BATCH,
