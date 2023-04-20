@@ -49,5 +49,5 @@ Swagger: http://localhost:3000/docs
 Please refer to TNX.pdf
 ```
 ## Improvement
-Using RAM memory to speed up the inserting and selecting data
-Using the better structure data to reduce time complexity
+- Using RAM memory to speed up the inserting and selecting data
+- Using the better structure data to reduce time complexity
